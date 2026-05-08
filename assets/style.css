@@ -1,0 +1,159 @@
+/* assets/css/style.css - Pink Theme untuk Hani */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap');
+
+:root {
+  --pink-deep:   #c2185b;
+  --pink-mid:    #e91e8c;
+  --pink-light:  #f48fb1;
+  --pink-pale:   #fce4ec;
+  --pink-pastel: #fff0f6;
+  --white:       #ffffff;
+  --text-dark:   #3d0026;
+  --text-mid:    #6d3552;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--pink-pastel);
+  color: var(--text-dark);
+}
+h1,h2,h3,h4,h5,h6 { font-family: 'Playfair Display', serif; }
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: linear-gradient(90deg, var(--pink-deep) 0%, var(--pink-mid) 100%);
+  box-shadow: 0 4px 20px rgba(194,24,91,.35);
+  padding: .6rem 0;
+}
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+  color: #fff !important;
+  letter-spacing: 1px;
+}
+.nav-link { color: rgba(255,255,255,.85) !important; font-weight: 600; transition: .2s; }
+.nav-link:hover, .nav-link.active { color: #fff !important; text-shadow: 0 0 8px rgba(255,255,255,.5); }
+.navbar .form-control {
+  border-radius: 20px; border: none;
+  background: rgba(255,255,255,.15); color: #fff;
+}
+.navbar .form-control::placeholder { color: rgba(255,255,255,.6); }
+.btn-search {
+  background: rgba(255,255,255,.2); color: #fff;
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: 20px; font-weight: 600;
+  transition: .2s;
+}
+.btn-search:hover { background: #fff; color: var(--pink-deep); }
+.dropdown-menu { border:none; box-shadow: 0 8px 24px rgba(194,24,91,.15); border-radius: 12px; }
+.dropdown-item { color: var(--text-mid); font-weight: 600; transition:.2s; }
+.dropdown-item:hover { background: var(--pink-pale); color: var(--pink-deep); }
+.dropdown-item.active { background: var(--pink-pale) !important; color: var(--pink-deep) !important; }
+
+/* ===== CAROUSEL ===== */
+#mainCarousel { border-bottom: 4px solid var(--pink-light); }
+.carousel-indicators [data-bs-target] { background-color: var(--pink-light); }
+
+/* ===== SECTION HEADER ===== */
+.section-header {
+  background: linear-gradient(90deg, var(--pink-deep), var(--pink-mid));
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem; font-weight: 700;
+  padding: .65rem 1.3rem;
+  border-radius: 10px 10px 0 0;
+  letter-spacing: .5px;
+}
+
+/* ===== CARDS ===== */
+.main-card {
+  border: none; border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(194,24,91,.12);
+  overflow: hidden; margin-bottom: 1.5rem;
+}
+.main-card .card-body { background: #fff; }
+
+.sidebar-card {
+  border: none; border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(194,24,91,.12); overflow: hidden;
+}
+
+/* ===== PROFILE CARD (Home) ===== */
+.profile-card {
+  border: none;
+  background: linear-gradient(135deg, var(--pink-pale) 0%, #fff 100%);
+  border-radius: 16px;
+  box-shadow: 0 6px 30px rgba(194,24,91,.15);
+  overflow: hidden;
+}
+.profile-badge {
+  background: var(--pink-pale); color: var(--pink-deep);
+  border-radius: 20px; font-size: .8rem; font-weight: 700;
+  padding: 3px 12px; display: inline-block; margin: 2px;
+}
+
+/* ===== ACCORDION ===== */
+.accordion-button { font-weight: 700; color: var(--pink-deep) !important; background: var(--pink-pale) !important; }
+.accordion-button:not(.collapsed) { background: var(--pink-mid) !important; color: #fff !important; box-shadow: none; }
+.accordion-button::after { filter: hue-rotate(300deg); }
+
+/* ===== CONTACT SOSMED CARDS ===== */
+.sosmed-card {
+  border: none; border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(194,24,91,.12);
+  background: #fff; transition: .25s;
+}
+.sosmed-card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(194,24,91,.22); }
+.sosmed-icon {
+  width: 64px; height: 64px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto; font-size: 2rem;
+}
+
+/* ===== SIDEBAR LIST ===== */
+.list-group-item {
+  border-left: none; border-right: none;
+  font-weight: 600; color: var(--text-mid); transition: .2s;
+}
+.list-group-item a { color: var(--text-mid); display: block; width: 100%; }
+.list-group-item:hover, .list-group-item.active-item { background: var(--pink-pale); padding-left: 1.5rem; }
+.list-group-item:hover a, .list-group-item.active-item a { color: var(--pink-deep); }
+
+/* ===== TABLE ===== */
+.table thead th { background: var(--pink-deep); color: #fff; border: none; }
+.table tbody tr:hover td { background: var(--pink-pale); }
+
+/* ===== BUTTONS ===== */
+.btn-pink {
+  background: var(--pink-mid); color: #fff;
+  border: none; border-radius: 20px; font-weight: 700; transition: .2s;
+}
+.btn-pink:hover { background: var(--pink-deep); color: #fff; }
+.btn-pink-outline {
+  border: 2px solid var(--pink-mid); color: var(--pink-mid);
+  border-radius: 20px; font-weight: 700; background: transparent; transition: .2s;
+}
+.btn-pink-outline:hover { background: var(--pink-mid); color: #fff; }
+
+/* ===== LOGIN BOX ===== */
+.login-box {
+  max-width: 420px; margin: auto;
+  background: #fff; border-radius: 18px;
+  box-shadow: 0 8px 40px rgba(194,24,91,.18); padding: 2.5rem;
+}
+.login-box .form-control:focus {
+  border-color: var(--pink-mid);
+  box-shadow: 0 0 0 .2rem rgba(233,30,140,.2);
+}
+
+/* ===== UTILITY ===== */
+.pink-title { color: var(--pink-deep); }
+.divider-pink { height: 3px; background: linear-gradient(90deg, var(--pink-mid), var(--pink-light)); border: none; border-radius: 2px; margin: 1rem 0; }
+
+/* ===== FORM CONTROLS ===== */
+.form-control:focus, .form-select:focus {
+  border-color: var(--pink-mid);
+  box-shadow: 0 0 0 .2rem rgba(233,30,140,.15);
+}
